@@ -46,17 +46,17 @@ class LL {
             return;
         }
 
-        Node save = head;
+        Node currNode = head;
         for (int j = 1; j < position - 1; j++) {
-            if (save == null) {
+            if (currNode == null) {
                 System.out.println("Index out of bounds");
                 return;
             }
-            save = save.link;
+            currNode = currNode.link;
         }
-        if (save != null) {
-            newNode.link = save.link;
-            save.link = newNode;
+        if (currNode != null) {
+            newNode.link = currNode.link;
+            currNode.link = newNode;
         }
     }
 
