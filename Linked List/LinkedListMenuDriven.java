@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.sound.midi.SysexMessage;
-
 class Node {
     int data;
     Node link;
