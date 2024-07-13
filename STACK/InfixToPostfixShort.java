@@ -1,4 +1,8 @@
-
+/**
+ * This programme converts infix expression to postfix expression using short trick....
+ * author : nirav
+ * date : 13/7/2024
+ */
 
 import java.util.Stack;
 import java.util.Scanner;
