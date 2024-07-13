@@ -64,7 +64,7 @@ class Unsorted{
         
     
 
-public class RemoveDuplicateElementUnsorted {
+public class RemoveDuplicateElement {
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
         Unsorted u = new Unsorted();
