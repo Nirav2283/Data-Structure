@@ -126,6 +126,7 @@ class Postfix {
 		else
 		{
 			System.out.println(polish);
+        
 		}
         
 

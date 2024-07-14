@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 class Postfix1{
     public boolean isOperator(char ch){
-        return (ch == '+' || ch == '-' || ch == '*' ||ch == '/' ||ch == '^' );
+        return (ch == '+' || ch == '-' || ch == '*' ||ch == '/' ||ch == '^');
     }
 
     public int prec(char ch){
