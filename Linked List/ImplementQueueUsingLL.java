@@ -66,7 +66,7 @@ public class ImplementQueueUsingLL {
         Scanner sc = new Scanner(System.in);
         Queue q = new Queue();
         System.out.println("1.INSERT AN ELEMENT");
-        System.out.println("2.DISPLAY A STACK");
+        System.out.println("2.DISPLAY A QUEUE");
         System.out.println("3.DELETE A ELEMENT");
         System.out.println("4.EXIT");
 
