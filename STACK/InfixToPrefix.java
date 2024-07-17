@@ -1,24 +1,19 @@
-/**
- * This programme is convert infix string to postfix string
- * author : Nirav
- * Date : 12/7/2024
- */
 import java.util.Stack;
 import java.util.Scanner;
 
-class Postfix {
+class Prefix {
     public int InputPrecedence(char ch) {
         switch (ch) {
             case '+':
             case '-':
-                return 1;
+                return 2;
 
             case '*':
             case '/':
-                return 3;
+                return 4;
 
             case '^':
-                return 6;
+                return 5;
 
             case '(':
                 return 9;
@@ -38,14 +33,14 @@ class Postfix {
         switch (ch) {
             case '+':
             case '-':
-                return 2;
+                return 1;
 
             case '*':
             case '/':
-                return 4;
+                return 3;
 
             case '^':
-                return 5;
+                return 6;
 
             case '(':
                 return 0;
@@ -54,6 +49,22 @@ class Postfix {
                 return 8;
 
         }
+
+    }
+
+    public String reverse(String s){
+        String reverse = "";
+        for(int i = s.length() - 1 ; i >= 0 ;i--){
+            if(s.charAt(i) == ')'){
+                reverse += '(';
+            }else if(s.charAt(i) == '('){
+                reverse += ')';
+            }else{
+                reverse += s.charAt(i);
+            }
+           
+        }
+        return reverse;
 
     }
 
@@ -79,14 +90,16 @@ class Postfix {
     }
 
     public void convert(String s){
+        
         Stack<Character> stack = new Stack<>();
 		String polish = "";
 		int rank = 0;
+        String rev_infix = reverse(s);
 		stack.push('(');
         
-		for(int i = 0 ; i < s.length() ; i++){
+		for(int i = 0 ; i < rev_infix.length() ; i++){
             
-			char next  = s.charAt(i);
+			char next  = rev_infix.charAt(i);
 				
 			if(stack.size() < 1)
 			{
@@ -122,10 +135,11 @@ class Postfix {
 		{
 			System.out.println("Invalid String");
             
+		
 		}
 		else
 		{
-			System.out.println(polish);
+			System.out.println(reverse(polish));
         
 		}
         
@@ -133,18 +147,15 @@ class Postfix {
     }
 }
 
-
-
-public class InfixToPostfix {
-    public static void main(String[] args) {
+public class InfixToPrefix{
+    public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
-        Postfix p = new Postfix();
+        Prefix p = new Prefix();
         System.out.println("Enter a INFIX string (and add extra closing bracket after enter a Expression): ");
         String infix = sc.nextLine();
-
-        System.out.print("Postfix Expression is: ");
+        System.out.println("Reverse of Infix is: "+p.reverse(infix));
+        System.out.print("Prefix Expression is: ");
         p.convert(infix);
-        
 
     }
 }
