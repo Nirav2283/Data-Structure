@@ -73,7 +73,7 @@ class LL {
 
     }
 
-    public void deleteAtfirst() {
+    public void deleteAtfirst(){
         if (head == null) {
             System.err.println("List is empty");
         }

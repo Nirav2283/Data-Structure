@@ -28,7 +28,7 @@ class Copy{
 
     }
 
-    public void copy(Copy c){
+    public void copy(Copy list2){
         if(first == null){
             System.out.println("List is empty");
             return;
@@ -36,7 +36,7 @@ class Copy{
         
         Node1 save = first;
         while(save!=null){
-            c.insert(save.info);
+            list2.insert(save.info);
             save = save.link;
 
         }
