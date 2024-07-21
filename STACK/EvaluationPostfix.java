@@ -42,8 +42,8 @@ class Evaluation{
                 int op2 = stack.pop();
                 int op1 = stack.pop();
                 int result = apply(next, op1, op2);
-
                 stack.push(result);
+                
 
             }
         }

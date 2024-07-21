@@ -49,7 +49,7 @@ class Postfix {
 
             case '(':
                 return 0;
-
+                
             default:
                 return 8;
 

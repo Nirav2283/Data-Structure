@@ -42,7 +42,7 @@ class Swap{
         
         ListNode prev = first;
         ListNode save = first.link;
-        first = save; 
+        first = first.link; 
         
         while (true) {
             ListNode nextNode = save.link;
