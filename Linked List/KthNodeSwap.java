@@ -27,15 +27,20 @@ class SwapNode{
     }
 
     public void swap(int k){
-        if(first == null || k < 0){
+        if(first == null){
             System.out.println("List is empty");
             return;
         }
+        
         MyNode save = first;
         int length = 0;
         while(save != null){
             save = save.link;
             length++;
+        }
+        if(k<0){
+            System.out.println("Invalid value of K try again");
+            return;
         }
 
         if(k > length){
@@ -51,7 +56,7 @@ class SwapNode{
 
         //kth node from end
         MyNode last = first;
-        for(int i = 0 ; i < length - k ;i++){
+        for(int i = length - k ; i > 0 ; i-- ){
             last = last.link;
         }
 
@@ -110,6 +115,8 @@ public class KthNodeSwap {
                 case 3:
                     System.out.print("Enter a value of K to swap: ");
                     int k = sc.nextInt();
+                    
+                    
                     s.swap(k);
                     s.display();
                     

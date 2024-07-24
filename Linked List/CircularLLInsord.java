@@ -69,11 +69,11 @@ public class CircularLLInsord {
         System.out.println("--------------WELCOME TO THE PROGRAMMEE-----------------");
         System.out.println("1. INSERT AT FIRST");
         System.out.println("2.DISPLAY A LIST");
+        
         System.out.println("3.EXIT");
         System.out.println("");
         while (true) {
             System.out.println();
-
             System.out.println();
             System.out.println("Enter a choice: ");
             int n = sc.nextInt();
