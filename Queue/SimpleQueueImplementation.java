@@ -12,10 +12,12 @@ class Queue{
         
     }
 
-    
+    public boolean isFull(){
+        return (r == n-1);
+    }
 
     public void enqueue(int val){
-        if(r >= n){
+        if(isFull()){
             System.out.println("Queue Overflow");
             return;
         }
