@@ -87,10 +87,8 @@ public class DoubleEndedQueueImplementation {
         q.dqinsert_rear(3);
         q.dqinsert_rear(2);
         q.dqinsert_rear(6);
-        
         q.dqdelete_rear();
         q.dqdelete_front();
-        
         q.display();
         
 
