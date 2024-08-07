@@ -1,7 +1,8 @@
-//Linear Search
+//Bubble sort
 import java.util.Scanner;
-public class LinearSearch {
-    public static void main(String[] args) {
+
+public class BubbleSort {
+    public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a size of array: ");
         int m = sc.nextInt();
@@ -16,19 +17,19 @@ public class LinearSearch {
         }
         System.out.println();
 
-        System.out.println("Enter a number to search: ");
-        int n = sc.nextInt();
-        boolean flag = false;
-        for(int i = 0 ; i < arr.length ; i++){
-            if(arr[i] == n){
-                System.out.println("Element "+arr[i]+" Found at: "+i);
-                flag = true;
-                break;
+        for(int i = 0 ; i < arr.length - 1 ;i++){
+            for(int j = 0 ; j < arr.length - i - 1 ; j++){
+                if(arr[j] > arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+
+                }
             }
         }
-        if(!flag){
-            System.out.println("Element not found");
+        System.out.print("Sorted Element is: ");
+        for(int i = 0 ; i < arr.length  ; i++){
+            System.out.print(" "+arr[i]);
         }
     }
-    
 }
