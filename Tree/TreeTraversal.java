@@ -71,7 +71,7 @@ class BinaryTree {
         } else if (direction.equalsIgnoreCase("R")) {
             if (parentNode.rptr == null) {
                 parentNode.rptr = new Node(child);
-            } else {
+            }else{
                 System.out.println("Right child already exists.");
             }
         } else {
